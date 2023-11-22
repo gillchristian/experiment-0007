@@ -2,7 +2,7 @@ module Pages.Home_ exposing (Model, Msg, page)
 
 import Effect exposing (Effect)
 import Html
-import Html.Attributes exposing (class)
+import Html.Attributes exposing (class, href, target)
 import Layouts
 import Page exposing (Page)
 import Route exposing (Route)
@@ -82,6 +82,15 @@ view model =
             [ Html.p [] [ Html.text "Welcome to the dashboard!" ]
             , Html.p [] [ Html.text "Increase the sidebar's counter then navigate to another page and back to see the counter persist!" ]
             , Html.p [] [ Html.text "Similarly, the settings counter state should persist across page navigations within the settings pages." ]
+            , Html.p []
+                [ Html.text "See the code: "
+                , Html.a
+                    [ href
+                        "https://github.com/gillchristian/experiment-0007"
+                    , target "_blank"
+                    ]
+                    [ Html.text "github.com/gillchristian/experiment-0007" ]
+                ]
             ]
         ]
     }
