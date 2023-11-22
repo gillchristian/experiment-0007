@@ -79,6 +79,9 @@ view model =
     { title = "Dashboard"
     , body =
         [ Html.div [ class "page" ]
-            [ Html.text "Welcome to the dashboard!" ]
+            [ Html.p [] [ Html.text "Welcome to the dashboard!" ]
+            , Html.p [] [ Html.text "Increase the sidebar's counter then navigate to another page and back to see the counter persist!" ]
+            , Html.p [] [ Html.text "Similarly, the settings counter state should persist across page navigations within the settings pages." ]
+            ]
         ]
     }
